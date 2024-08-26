@@ -35,4 +35,15 @@ def range_values(n):
 range_values(10)
 
 # This is what we call a nested loop and it has a time complexity of O(n^2). For the outer loop which is "for i in range(n)" to move on from 0 to 1, the inner loop "for j in range(n)" must be satisfied. Think about it like layers. For the outer loop to
-# on, the inner loop must first be satisfied. This explains why the outer loop stays at one number 9 times to allow the inner loop to iterate fully before moving on to the next. 
+# on, the inner loop must first be satisfied. This explains why the outer loop stays at one number 9 times to allow the inner loop to iterate fully before moving on to the next. We can see there are 100 operations in this nested loop (10*10).
+
+
+def range_values(n): 
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+            print(i, j, k)
+        
+range_values(10)
+
+# This would be O(n^3). Adding another nested loop would be 10*10*10 which would come out to 1000 total operations. 
